@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     nome TEXT,
     idade INTEGER,
     cpf TEXT,
-    sexo TEXT
-    endereco TEXT,
+    sexo TEXT,
+    adress TEXT,
     interesses TEXT,
     eventos TEXT,
     compras TEXT,
@@ -78,7 +78,7 @@ with st.form(key="formulario_furia"):
     idade = st.number_input("Digite sua idade", min_value=0, max_value=120)
     cpf = st.text_input("Digite seu CPF")
     sexo = st.selectbox("Selecione seu sexo", ["Masculino", "Feminino", "Outro"])
-    endereco = st.text_input("Digite seu endereço")
+    adress = st.text_input("Digite o estado e cidade onde você mora")
     interesses = st.text_area("Quais seus maiores interesses em e-sports? Ex: jogos, times, jogadores")
     eventos = st.text_area("Quais eventos relacionados à FURIA você participou? Ex: campeonatos de CSGO, Kings League, etc.")
     compras = st.text_area("Compras relacionadas a e-sports no último ano")
@@ -129,7 +129,7 @@ if enviar:
     Baseado nas seguintes informações do usuário:
     Nome: {nome}
     Idade: {idade}
-    Endereço: {endereco}
+    Endereço: {adress}
     CPF: {cpf}
     Sexo: {sexo}
     Interesses: {interesses}
@@ -159,12 +159,12 @@ if enviar:
 
     if documento_valido:
 
-        print(nome, idade, cpf, sexo, endereco, interesses, eventos, compras, redes_sociais, documento_valido)
+        print(nome, idade, cpf, sexo, adress, interesses, eventos, compras, redes_sociais, documento_valido)
             # Inserir usuário no banco de dados
         cursor.execute('''
-        INSERT INTO usuarios (nome, idade, cpf, sexo, endereco, interesses, eventos, compras, redes_sociais, documento_validado)
+        INSERT INTO usuarios (nome, idade, cpf, sexo, adress, interesses, eventos, compras, redes_sociais, documento_validado)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (nome, idade, cpf, sexo, endereco, interesses, eventos, compras, redes_sociais, documento_valido))
+        ''', (nome, idade, cpf, sexo, adress, interesses, eventos, compras, redes_sociais, documento_valido))
         conn.commit()
 
         usuario_id = cursor.lastrowid
