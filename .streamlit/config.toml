@@ -1,0 +1,11 @@
+[theme]
+base="dark"
+primaryColor="#FFD700" # amarelo ouro estilo FURIA
+backgroundColor="#0e1117" # quase preto
+secondaryBackgroundColor="#262730" # cinza escuro
+textColor="#FFFFFF" # texto branco
+font="sans serif"
+
+[server]
+headless = true
+enableCORS = false
