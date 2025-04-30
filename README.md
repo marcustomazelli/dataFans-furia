@@ -104,16 +104,11 @@ streamlit run main.py
 
 ---
 
-## ✍️ Autor
+## Autor
 
 **Marcus Tomazelli**  
 Estudante de Engenharia da Computação, desenvolvedor iniciante e fã da FURIA.  
 Conecte-se: [marcustomazelli](https://www.linkedin.com/in/marcus-tomazelli/)
 
----
 
-## 🏴 Inspirado por
-
-- A estratégia "Know Your Fan" usada em clubes e organizações esportivas
-- O potencial de IA para personalizar experiências de torcedores
 
