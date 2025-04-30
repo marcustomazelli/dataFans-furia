@@ -1,10 +1,10 @@
-# 📄 Projeto: Know Your Fan - Fã FURIA
+# Projeto: Know Your Fan - Fã FURIA 🇧🇷
 
 Este projeto é uma aplicação interativa em Python desenvolvida com **Streamlit**, que tem como objetivo **coletar, analisar e gerar perfis personalizados de fãs da FURIA** (time brasileiro de eSports) com o apoio de **Inteligência Artificial (OpenAI)** e **validação de documentos via imagem**.
 
 ---
 
-## 🌐 Aplicação Online
+## Aplicação Online
 
 Acesse a versão pública hospedada no Railway:
 
@@ -12,7 +12,7 @@ Acesse a versão pública hospedada no Railway:
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 ### 1. **Formulário interativo para fãs da FURIA**
 - Nome
@@ -50,7 +50,7 @@ Acesse a versão pública hospedada no Railway:
 
 ---
 
-## 🧠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Função |
 |------------|--------|
@@ -64,24 +64,7 @@ Acesse a versão pública hospedada no Railway:
 
 ---
 
-## 📁 Estrutura do Projeto (recomendada)
-
-```
-project/
-├── assets/
-│   └── furia.png
-├── .streamlit/
-│   └── config.toml
-├── .env
-├── .gitignore
-├── main.py
-├── requirements.txt
-├── Procfile
-```
-
----
-
-## 📦 Instalação local (modo dev)
+## Instalação local 
 
 1. Clone o repositório:
 ```bash
