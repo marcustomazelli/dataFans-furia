@@ -74,7 +74,7 @@ st.title("Formulário Fã FURIA 🇧🇷")
 st.write("Preencha suas informações abaixo e ganhe **30% de desconto** nos produtos FURIA!")
 
 with st.form(key="formulario_furia"): #pegando os inputs do usuário e botando nas respectivas variáveis
-    nome = st.text_input("Digite seu nome")
+    nome = st.text_input("Digite seu nome completo")
     idade = st.number_input("Digite sua idade", min_value=0, max_value=120)
     cpf = st.text_input("Digite seu CPF")
     sexo = st.selectbox("Selecione seu sexo", ["Masculino", "Feminino", "Outro"])
@@ -196,5 +196,4 @@ Não inclua mais nada na resposta além de '1' ou '0'.
         st.markdown(f"### Perfil do Fã\n{resposta_gerada}")
         st.info("Parabéns! Você ganhou **30% de desconto** em produtos FURIA! 🛍️")
     else:
-        st.warning("⚠️ Documento inválido ou incompleto.")
-        st.success("Mande o documento correto para validar seu cadastro.")
+        st.warning("⚠️ Documento inválido ou informações incompletas. Verifique os dados e tente novamente.")
