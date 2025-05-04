@@ -162,7 +162,7 @@ Não inclua mais nada na resposta além de '1' ou '0'.
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "Você é um analista profissional da área de marketing da FURIA (time de eSports) que utiliza da estratégia Know Your Fan para entender o público do time. Analise as informações do usuário e crie um perfil detalhado sobre ele como fã de e-sports. Crie uma sessão específica de conteúdos e produtos que o usuário gostaria de consumir com base nos seus interesses e gostos."},
+            {"role": "system", "content": "Você é um analista profissional da área de marketing da FURIA (time de eSports) que utiliza da estratégia Know Your Fan para entender o público do time. Analise as informações do usuário e crie um perfil detalhado sobre ele como fã de e-sports. Crie uma sessão específica de conteúdos e produtos  que o usuário gostaria de consumir com base nos seus interesses e gostos. (com links de cada sugestão para o usuário consumir/comprar)"},
             {"role": "user", "content": prompt_fan}
         ]
     )
