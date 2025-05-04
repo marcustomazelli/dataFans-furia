@@ -105,7 +105,17 @@ if enviar: # se ele clicar em enviar
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": "Analise esta imagem e extraia Nome, CPF e Data de Nascimento. Responda apenas com '1' se o documento parece válido, caso não seja responda com '0'. Não quero que responda nada além de 1 ou 0."},
+                        {"type": "text", "text": f"""
+Analise esta imagem e extraia o Nome completo e o CPF. Compare esses valores extraídos com os seguintes informados pelo usuário:
+Nome informado: {nome}
+CPF informado: {cpf}
+
+Responda apenas com:
+- '1' se o documento é válido e os dados extraídos batem com os informados.
+- '0' se o documento não é válido ou os dados extraídos não batem.
+
+Não inclua mais nada na resposta além de '1' ou '0'.
+"""},
                         {"type": "image_url",
                          "image_url": {
                              "url": f"data:{documento.type};base64,{base64_image}",
@@ -152,7 +162,7 @@ if enviar: # se ele clicar em enviar
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "Você é um analista profissional da área de marketing da FURIA (time de eSports) que utiliza da estratégia Know Your Fan para entender o público do time. Analise as informações do usuário e crie um perfil detalhado sobre ele como fã de e-sports. Crie ao final da análise também uma sessão específica de conteúdos e produtos que o usuário gostaria de consumir com base nos seus interesses e gostos."},
+            {"role": "system", "content": "Você é um analista profissional da área de marketing da FURIA (time de eSports) que utiliza da estratégia Know Your Fan para entender o público do time. Analise as informações do usuário e crie um perfil detalhado sobre ele como fã de e-sports. Crie uma sessão específica de conteúdos e produtos que o usuário gostaria de consumir com base nos seus interesses e gostos."},
             {"role": "user", "content": prompt_fan}
         ]
     )
